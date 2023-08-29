@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingLeft="@dimen/_5sdp"
+    android:paddingRight="@dimen/_5sdp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.verify.VerificationActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="@dimen/_25sdp"
+        android:layout_height="@dimen/_25sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.025"
+        app:srcCompat="@drawable/ic_baseline_arrow_back_24" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="Verification Code"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_16ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Please enter the verification code sent to your email."
+        android:textColor="@color/text_gray"
+        android:lines="2"
+        android:paddingRight="@dimen/_25sdp"
+        android:paddingLeft="@dimen/_25sdp"
+        android:maxLines="2"
+        android:textSize="@dimen/_12ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:gravity="center"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:orientation="horizontal"
+        android:id="@+id/ly_otp"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/textView3"
+        app:layout_constraintTop_toBottomOf="@id/textView3"
+        app:layout_constraintVertical_bias="0.02">
+
+        <EditText
+            android:id="@+id/otp1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/otp_background"
+            android:inputType="number"
+            android:maxLength="1"
+            android:imeOptions="actionNext"
+            android:nextFocusDown="@id/otp2"
+            android:nextFocusForward="@id/otp2"
+            tools:ignore="HardcodedText"
+            android:gravity="center"
+            android:layout_weight="1"
+            app:layout_constraintHorizontal_bias="0.0"
+            android:hint="X"
+            android:textSize="@dimen/_14ssp"
+            android:textColor="@color/text_gray"
+            android:fontFamily="@font/poppins_semibold"
+            />
+
+        <EditText
+            android:id="@+id/otp2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/otp_background"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:inputType="number"
+            android:maxLength="1"
+            android:imeOptions="actionNext"
+            android:nextFocusDown="@id/otp3"
+            android:nextFocusForward="@id/otp3"
+            tools:ignore="HardcodedText"
+            android:gravity="center"
+            android:layout_weight="1"
+            app:layout_constraintHorizontal_bias="0.0"
+            android:hint="X"
+            android:textSize="@dimen/_14ssp"
+            android:textColor="@color/text_gray"
+            android:fontFamily="@font/poppins_semibold"
+            />
+
+        <EditText
+            android:id="@+id/otp3"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/otp_background"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:inputType="number"
+            android:maxLength="1"
+            android:imeOptions="actionNext"
+            android:nextFocusDown="@id/otp4"
+            android:nextFocusForward="@id/otp4"
+            tools:ignore="HardcodedText"
+            android:gravity="center"
+            android:layout_weight="1"
+            app:layout_constraintHorizontal_bias="0.0"
+            android:hint="X"
+            android:textSize="@dimen/_14ssp"
+            android:textColor="@color/text_gray"
+            android:fontFamily="@font/poppins_semibold"
+            />
+        <EditText
+            android:id="@+id/otp4"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/otp_background"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:inputType="number"
+            android:maxLength="1"
+            android:imeOptions="actionNext"
+            android:nextFocusDown="@id/otp5"
+            android:nextFocusForward="@id/otp5"
+            tools:ignore="HardcodedText"
+            android:gravity="center"
+            android:layout_weight="1"
+            app:layout_constraintHorizontal_bias="0.0"
+            android:hint="X"
+            android:textSize="@dimen/_14ssp"
+            android:textColor="@color/text_gray"
+            android:fontFamily="@font/poppins_semibold"
+            />
+
+
+        <EditText
+            android:id="@+id/otp5"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/otp_background"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:inputType="number"
+            android:maxLength="1"
+            android:imeOptions="actionNext"
+            android:nextFocusDown="@id/otp6"
+            android:nextFocusForward="@id/otp6"
+            tools:ignore="HardcodedText"
+            android:gravity="center"
+            android:layout_weight="1"
+            app:layout_constraintHorizontal_bias="0.0"
+            android:hint="X"
+            android:textSize="@dimen/_14ssp"
+            android:textColor="@color/text_gray"
+            android:fontFamily="@font/poppins_semibold"
+            />
+
+        <EditText
+            android:id="@+id/otp6"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/otp_background"
+            android:inputType="number"
+            android:maxLength="1"
+            android:imeOptions="actionNext"
+            android:layout_marginLeft="@dimen/_5sdp"
+            tools:ignore="HardcodedText"
+            android:gravity="center"
+            android:layout_weight="1"
+            app:layout_constraintHorizontal_bias="0.0"
+            android:hint="X"
+            android:textSize="@dimen/_14ssp"
+            android:textColor="@color/text_gray"
+            android:fontFamily="@font/poppins_semibold"
+            />
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginTop="@dimen/_24sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:background="@drawable/button_radius"
+        android:fontFamily="@font/poppins_bold"
+        android:text="Continue"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:textAllCaps="false"
+        android:textSize="@dimen/_14ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/llhve" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_24sdp"
+        android:layout_marginEnd="@dimen/_1sdp"
+        android:layout_marginBottom="@dimen/_25sdp"
+        android:orientation="horizontal"
+        android:id="@+id/llhve"
+        app:layout_constraintEnd_toEndOf="@+id/ly_otp"
+        app:layout_constraintStart_toStartOf="@+id/ly_otp"
+        app:layout_constraintTop_toBottomOf="@+id/ly_otp">
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_medium"
+            android:text="If you didn't recieve a code?"
+            android:textColor="@color/text_gray"
+            android:textSize="@dimen/_12ssp"
+            />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Resend Code"
+            android:layout_marginLeft="@dimen/_3sdp"
+            android:textColor="@color/app_color"
+            android:textSize="@dimen/_12ssp"
+            />
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/_5sdp"
+    android:paddingRight="@dimen/_5sdp"
+    tools:context=".ui.dashboard.Order.OrderActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/imageView2"
+        app:cardCornerRadius="8dp"
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_150sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        android:background="@drawable/textview_bg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.029"
+        android:elevation="10dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/tshirt4" />
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/tvTopWeek"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:ems="10"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="Your Order (2)"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_12ssp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/imageView2"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+    <TextView
+        android:id="@+id/tvCountry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/_2sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:ems="10"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Denim-tshirt"
+        android:textColor="@color/text_gray"
+        android:textSize="@dimen/_10ssp"
+        app:layout_constraintEnd_toEndOf="@+id/tvTopWeek"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/tvTopWeek"
+        app:layout_constraintTop_toBottomOf="@+id/tvTopWeek" />
+
+
+    <LinearLayout
+        android:id="@+id/llincDec"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_25sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toBottomOf="@+id/tvCountry"
+        app:layout_constraintStart_toStartOf="@+id/tvCountry">
+
+
+        <ImageView
+            android:id="@+id/ivMinus"
+            android:layout_width="@dimen/_22sdp"
+            android:layout_height="@dimen/_22sdp"
+            app:srcCompat="@drawable/minus"
+            />
+
+        <TextView
+            android:id="@+id/tvQty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="1"
+            android:layout_marginLeft="@dimen/_8sdp"
+            android:layout_marginRight="@dimen/_8sdp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14ssp"
+            />
+        <ImageView
+            android:id="@+id/ivPlus"
+            android:layout_width="@dimen/_22sdp"
+            android:layout_height="@dimen/_22sdp"
+            app:srcCompat="@drawable/plus"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvprice"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_25sdp"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="$19.20"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_14ssp"
+        app:layout_constraintBottom_toBottomOf="@+id/llincDec"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.331"
+        app:layout_constraintStart_toStartOf="@+id/llincDec"
+        app:layout_constraintTop_toTopOf="@+id/llincDec"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/tvStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_25sdp"
+        android:fontFamily="@font/poppins_bold"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:text="Status"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_12ssp"
+        app:layout_constraintTop_toBottomOf="@+id/llincDec"
+        app:layout_constraintStart_toStartOf="@+id/llincDec"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <LinearLayout
+        android:id="@+id/tvPizza"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:gravity="center_vertical"
+        android:background="@drawable/textview_bg"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/tvStatus"
+        app:layout_constraintStart_toStartOf="@+id/tvStatus"
+        app:layout_constraintVertical_bias="0.0" >
+        <CheckBox
+            android:layout_width="@dimen/_18sdp"
+            android:layout_height="@dimen/_18sdp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            />
+
+        <TextView
+            android:id="@+id/tvChicken3"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_40sdp"
+            android:fontFamily="@font/poppins_medium"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:text="suntshirt"
+            android:layout_weight="2"
+            android:gravity="center_vertical"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14ssp"
+            app:layout_constraintTop_toBottomOf="@+id/tvStatus"
+            app:layout_constraintStart_toStartOf="@+id/tvStatus"
+            app:layout_constraintVertical_bias="0.0" />
+        <TextView
+            android:id="@+id/tvChickenPrice2"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_40sdp"
+            android:fontFamily="@font/poppins_medium"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:text="2322"
+            android:gravity="center_vertical"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14ssp"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/tvChicken"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:gravity="center_vertical"
+        android:background="@drawable/textview_bg"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/tvPizza"
+        app:layout_constraintStart_toStartOf="@+id/tvPizza"
+        app:layout_constraintVertical_bias="0.0" >
+
+
+        <CheckBox
+            android:layout_width="@dimen/_18sdp"
+            android:layout_height="@dimen/_18sdp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            />
+
+        <TextView
+            android:id="@+id/tvChicken2"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_40sdp"
+            android:fontFamily="@font/poppins_medium"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:text="jeans"
+            android:layout_weight="2"
+            android:gravity="center_vertical"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14ssp"
+            app:layout_constraintTop_toBottomOf="@+id/tvStatus"
+            app:layout_constraintStart_toStartOf="@+id/tvStatus"
+            app:layout_constraintVertical_bias="0.0" />
+        <TextView
+            android:id="@+id/tvChickenPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_40sdp"
+            android:fontFamily="@font/poppins_medium"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:text="2233"
+            android:gravity="center_vertical"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14ssp"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvTopping"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_bold"
+        android:layout_marginTop="@dimen/_20sdp"
+
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:text="Add a Topping ?"
+        android:gravity="center_vertical"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_14ssp"
+        app:layout_constraintTop_toBottomOf="@+id/tvChicken"
+        app:layout_constraintStart_toStartOf="@+id/tvChicken"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:background="@drawable/button_radius"
+        android:fontFamily="@font/poppins_bold"
+        android:text="Add to Cart ($45.95)"
+        android:textAllCaps="false"
+        android:textSize="@dimen/_14ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTopping" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
